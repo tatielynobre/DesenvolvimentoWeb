@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos vorazes</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .div-nav{
+            background-color: brown;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .nav-itens{
+            display: inline-block;
+        }
+        .nav-itens a{
+            text-decoration: none;
+            color: aliceblue;
+            padding: 10px;
+        }
+        .nav-itens a:hover{
+            text-decoration: underline;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 8px;
+        }
+        aside{
+            width:0;
+            flex: 1;
+        }
+        h2{
+            background-color: cadetblue;
+        }
+        .Conteudo{
+            background-color: burlywood;
+            border-radius: 4px;
+            padding: 3px;
+            flex-wrap: wrap;
+        }
+        aside ul{
+            list-style: none;
+            padding: 0;
+        }
+        aside a{
+            text-decoration:none;
+            color: green;
+        }
+        aside a:hover{
+            text-decoration: underline;
+        }
+        footer{
+            text-align: center;
+            background-color: cadetblue;
+        }
+
+        @media (max-width: 768px) {
+        main {
+        grid-template-columns: 1fr;
+    }
+
+    .div-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-itens a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav class="div-nav">
+                <div style="flex:1;">
+                    <h1 style="margin-top: 10px; margin-left: 15px; color: aliceblue;">Jogos vorazes</h1>
+                </div>
+                <div>
+                    <ul>
+                        <li class="nav-itens"><a href="#">Home</a></li>
+                        <li class="nav-itens"><a href="#">Personagens</a></li>
+                        <li class="nav-itens"><a href="#">Filmes</a></li>
+                        <li class="nav-itens"><a href="#">Livros</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    <section>
+       
+        <main>  
+            <article>
+                <h2>História</h2>
+                <figure><img src="jogos vorazes.jpg" alt=""></figure>
+                <div class="Conteudo">
+                 <p>A história de "Jogos Vorazes" se passa em Panem, uma nação distópica formada após a destruição da América do Norte. A Capital, um centro de luxo e poder, controla doze distritos mais pobres, e para demonstrar seu domínio, organiza anualmente os Jogos Vorazes. Neles, um menino e uma menina de cada distrito, com idades entre 12 e 18 anos, são escolhidos como tributos e obrigados a lutar até a morte em uma arena, enquanto o evento é transmitido para toda a nação. A história de Katniss Everdeen, uma jovem do Distrito 12, se inicia quando ela se oferece para substituir sua irmã como tributo, iniciando uma jornada pela sobrevivência e pela revelação da crueldade do sistema. 
+                </p>
+                <p>O desenvolvimento de The Hunger Games iniciou-se em março de 2009, quando a Lions Gate Entertainment entrou em um contrato de co-produção com a Color Force, que tinha adquirido os direitos do livro poucas semanas antes. Collins colaborou com Ray e Ross para escrever o roteiro. O script final expandiu a personagem Seneca Crane para permitir várias outras desenvolturas a serem mostradas ao público e Ross adicionou diversas cenas entre Crane e Coriolanus Snow. Os testes para os protagonistas foram feitos entre março e maio de 2011. A filmagem começou no mesmo mês e terminou em setembro, e foi realizada na Carolina do Norte. A produção foi feita em formato analógico, e não em digital — opondo-se a um padrão já quase estabelecido no século XXI.</p>
+            </div>
+            </article>
+            <aside>
+                <h3>Semelhantes</h3>
+                <ul>
+                    <li><a href="">Divergente</a></li>
+                    <li><a href="">Maze runner</a></li>
+                    <li><a href="">Matrix</a></li>
+                </ul>
+            </aside>
+        </main>
+    </section>
+    <footer>
+        <p>Copyright © 2016 Tatiely Nobre. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
