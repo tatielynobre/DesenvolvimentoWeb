@@ -2,58 +2,86 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ativ03</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+ 
+  <title>Ativ03</title>
 </head>
 
 <body>
-    <header>
-        <div id="header">
-            <h1>my website</h1>
-            <p>with a <b>flexible</b> layout</p>
+  <header>
+    <div id="header">
+      <h1>my website</h1>
+      <p>with a <b>flexible</b> layout</p>
+      <button onclick="toggleDarkMode()">Modo Escuro</button>
+
+    </div>
+  </header>
+
+  <nav id="navbar">
+    <a href="">line1</a>
+    <a href="#">line2</a>
+    <a href="#">line3</a>
+    <a href="">line4</a>
+  </nav>
+
+  <main>
+    <div>
+      <article id="row">
+        <div id="about">
+          <h2>Katniss Everdeen</h2>
+          <h5>Photo of me</h5>
+          <div class="img"><img src="assets/kat.jpe" alt="Katniss" /></div>
+          <p>
+            Katniss Everdeen é a protagonista da trilogia Jogos Vorazes, uma jovem
+            corajosa e habilidosa com o arco e flecha que vive no empobrecido Distrito
+            12 de Panem. Após se voluntariar para participar dos Jogos Vorazes no
+            lugar de sua irmã, ela se torna um símbolo de resistência contra o governo
+            opressor da Capital, liderando uma revolução que muda o destino de toda a
+            nação.
+          </p>
+          <h3>Semelhantes</h3>
+          <p>Conheça outros personagens</p>
+          <div class="fakeimg" style="height: 60px"><img src="assets/peeta-mellark-capa.jpg" alt="" /></div><br />
+          <div class="fakeimg" style="height: 60px"><img src="assets/finnick.jpg" alt="" /></div><br />
+          <div class="fakeimg" style="height: 60px"><img src="assets/efiie.jpg" alt="" /></div>
         </div>
-        <div id="navbar"><a href="">line1</a><a href="#">line2</a><a href="#">line3</a><a href="">line4</a></div>
-    </header>
-    <main>
-        <div>
-            <article id="row">
-                <div id="about">
-                    <h2>about me</h2>
-                    <h5>Photo of me</h5>
-                    <div class="img">Image</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi maxime ex assumenda atque quod
-                    </p>
-                    <h3>more txt</h3>
-                    <p>Lorem ipsum dolor sit ame.</p>
-                    <div class="fakeimg" style="height:60px;">Image</div><br>
-                    <div class="fakeimg" style="height:60px;">Image</div><br>
-                    <div class="fakeimg" style="height:60px;">Image</div>
-                </div>
-                <div class="main">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Dec 7, 2024</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco.</p>
-                    <br>
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2024</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco. </p>
-                </div>
+        <div class="main">
+          <h2>Jogos Vorazes</h2>
+          <h5>23 de março de 2012</h5>
+          <div class="Capa" style="height: 200px"><img src="assets/Capa.jpg" alt="" /></div>
+          <h5>Primeiro filme</h5>
+          <p>
+            Sua irmã é escolhida como tributo e seu mundo vira de cabeça para baixo,
+            sem pensar muito katniss se voluntária para substitui-la, este ato de
+            coragem irá mudar sua vida de cabeça vida, ela agora terá que lutar para
+            sobreviver dentro da arena. Que os jogos vorazes comecemp
+          </p>
+          <br />
+          <h2>Em chamas</h2>
+          <h5>15 de novembro de 2013</h5>
+          <div class="Capa" style="height: 200px"><img src="assets/chamas.jpg" alt="" /></div>
+          <h5>Segundo filme</h5>
+          <p>
+            Snow não ficou satistfeito com a maneira que katniss e peeta ganharam os
+            jogos, sua irá é tanto que agora no massacre quartenário eles terão que
+            lutar novamente
+          </p>
         </div>
-        </article>
-    </main>
-    <footer>
-        <h2>Footer</h2>
-    </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <h2>Footer</h2>
+  </footer>
+  <script>
+    /*botao para modo escuro*/
+     function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 
 </html>
