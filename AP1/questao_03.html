@@ -36,7 +36,7 @@ ld/1.svg" alt="">
     <div>
         <button id="voltar" onclick="voltar()">voltar</button>
         <button id="adiantar" onclick="adiantar()">Adiantar</button>
-        
+
         <!--adicionei um botão de reiniciar-->
         <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
     </div>
@@ -48,7 +48,7 @@ ld/1.svg" alt="">
         let btvoltar = document.getElementById("voltar")
         let btreiniciar = document.getElementById("reiniciar")
 
-        function checkButtonState() {
+        function state() {
             btvoltar.disabled = pokeid <= 1;
             btadiantar.disabled = pokeid >= 100;
         }
@@ -57,20 +57,20 @@ ld/1.svg" alt="">
                 pokeid--;
                 pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid}.svg`;
             }
-            checkButtonState()
+            state()
         }
         function adiantar() {
             if (pokeid < 100) {
                 pokeid++;
                 pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid}.svg`;
             }
-            checkButtonState()
+            state()
         }
         function reiniciar() {
             pokemon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg";
             pokeid = 1;
         }
-        checkButtonState()
+        state()
     </script>
 </body>
 
