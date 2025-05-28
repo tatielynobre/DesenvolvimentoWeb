@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 4</title>
+    <style>
+        div.notification-card {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            height: 100px;
+            
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 2px 3px 3px rgba(128, 128, 128, 0.324);
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        div.card-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-btn {
+            position: absolute; 
+            top: 8px; 
+            right: 8px; 
+
+            background-color: rgb(255, 79, 79);
+            color: aliceblue;
+            border: none;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="notification-card">
+        <div class="card-header">
+            <button class="close-btn" onclick="fechar()">X</button>
+        </div>
+        <div class="card-content">
+            <h3>Novidade!</h3>
+            <p>Confira nossos novos produtos.</p>
+        </div>
+    </div>
+    
+    <script>
+    // Questão 5
+        const card = document.getElementsByClassName("notification-card")[0]
+            const close = document.getElementsByClassName("close-btn")[0]
+        function fechar() {
+            card.style.display = "none";
+        }
+        closeButton.addEventListener('click',fechar)
+    </script>
+</body>
+
+</html>

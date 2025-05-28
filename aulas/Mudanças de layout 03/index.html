@@ -10,6 +10,8 @@
     <h1>Teste</h1>
     <button onclick="Layout_001()">layout 001</button>
     <button onclick="Layout_002()">layout 002</button>
+    <button onclick="toggle()">Toggle</button>
+    <button onclick="circular()">circular</button>
     <p id="p-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima soluta aut error suscipit, dicta qui provident iusto, laudantium est deserunt ducimus obcaecati repellat necessitatibus amet ratione optio maiores at? Consequuntur.</p>
     <p id="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dicta distinctio neque libero non, illo labore, in rem at ex quis earum tempora deserunt ut. Blanditiis eius a quia beatae.</p>
     <p id="p-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit itaque nemo soluta, quae debitis, reprehenderit animi cupiditate repellat veniam minus facilis architecto obcaecati aut quis voluptate magnam nobis, nihil ea.</p>
@@ -22,6 +24,29 @@
             let link = document.getElementById("tema")
             link.href = "002.css"
         }
+
+        let flag_layout = true;
+
+        function toggle(){
+            let link = document.getElementById("tema")
+
+            if(flag_layout){
+              link.href = "001.css"
+        }
+        else{
+            link.href = "002.css"
+        }
+        flag_layout = !flag_layout
+    }
+
+    let index=1;
+    function circular(){
+       let link = document.getElementById("tema")
+
+       link.href = `00${index}.css`
+
+       index = (index + 1) % 5
+    }
     </script>
 </body>
 </html>

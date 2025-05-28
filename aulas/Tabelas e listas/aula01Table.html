@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        table,th, td{
-            border: 2px, solid, #509872;
+        table{
+            width: 100%;
+        }
+        table, th, td{
+            border: 2px, solid, #870000;
             border-radius: 3px;
             color: brown;
-            border-collapse: collapse;
-        }
-        th,td{
-            width: 90px;
+            border-collapse: collapse; /*tira os espaços entre as bordas*/
             font-family:'Courier New', Courier, monospace;
             font-size: 14px;
             padding: 8px;
+        }
+        td{
+            border-radius:6px ;
+            border-style:dashed;
+            background-color:rgb(28, 20, 20);
+        }
+        td:nth-child(even), th:nth-child(even) {
+        background-color: #D6EEEE;
+        }
+        th{
+            background-color: cadetblue;
+            border-radius:6px;
         }
     </style>
 </head>
 <body>
     <h1>Hello world</h1>
     <table>
+        <th colspan="8" style="background-color:rgb(255, 252, 69);">semana</th>
         <tr>
             <th></th>
             <th>Segunda</th>

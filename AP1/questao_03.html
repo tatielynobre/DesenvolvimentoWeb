@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 3</title>
+    <style>
+        /*acredito que não tenha ficado da maneira mais adequada    */
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 11%;
+
+            padding: 20px;
+        }
+
+        img {
+            max-width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img id="poke" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-wor
+ld/1.svg" alt="">
+    </div>
+    <div>
+        <button id="voltar" onclick="voltar()">voltar</button>
+        <button id="adiantar" onclick="adiantar()">Adiantar</button>
+        
+        <!--adicionei um botão de reiniciar-->
+        <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
+    </div>
+
+    <script>
+        let pokeid = 1;
+        let pokemon = document.getElementById("poke")
+        let btadiantar = document.getElementById("adiantar")
+        let btvoltar = document.getElementById("voltar")
+        let btreiniciar = document.getElementById("reiniciar")
+
+        function checkButtonState() {
+            btvoltar.disabled = pokeid <= 1;
+            btadiantar.disabled = pokeid >= 100;
+        }
+        function voltar() {
+            if (pokeid > 1) {
+                pokeid--;
+                pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid}.svg`;
+            }
+            checkButtonState()
+        }
+        function adiantar() {
+            if (pokeid < 100) {
+                pokeid++;
+                pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid}.svg`;
+            }
+            checkButtonState()
+        }
+        function reiniciar() {
+            pokemon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg";
+            pokeid = 1;
+        }
+        checkButtonState()
+    </script>
+</body>
+
+</html>

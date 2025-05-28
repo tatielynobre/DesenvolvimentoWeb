@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            background-color: antiquewhite;
+            height: 200px;
+
+            display: flex; /*começara da esquerda pra direita*/
+            flex-direction:row;/*vai dizer ao navegador quem é a linha principal o eixo y ou x*/
+            justify-content:flex-end;
+            align-items:flex-start;/*vai levar em consideração sempre o contraio do flex-direction*/
+            flex-wrap: wrap;/*para embrulhar, ou ter tipo uma quebra de linha*/
+            overflow: hidden;/*scroll*/
+            /*flex: 1; para tornar um elemento flexível e fazer com que ele ocupe o espaço restante disponível no seu contêiner*/
+            /*<div class="flex-itens" style="background-color:yellow; align-self: flex-end;"></div>
+            <div class="flex-itens" style="background-color: red;"></div>*/
+            
+        }
+        .flex-itens{
+            background-color: blueviolet;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Estudo de flexbox</h1>
+    <div class="flex-container">
+        <div class="flex-itens"></div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid brown;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            background-color: #868686;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+        }
+
+        tr:nth-child(even) {
+            background-color: #bcbcbc;
+        }
+
+        td {
+            font-size: 12px;
+        }
+        tr:hover{
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="collum">Código</th>
+                <th class="collum">Nome</th>
+                <th class="collum">Categoria</th>
+                <th class="collum">Preço</th>
+                <th class="collum">Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Carne</td>
+                <td>comida</td>
+                <td>R$30,00</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Livro</td>
+                <td>Objeto</td>
+                <td>R$12,00</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>celular</td>
+                <td>eletronico</td>
+                <td>R$900,00</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
